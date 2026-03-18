@@ -1,0 +1,32 @@
+.custom-button {
+  width: 130px;
+  height: 38px;
+  margin-top: 10px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+  background-color: #100f1b;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.custom-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 0;
+  background-color: #d6d6d6;
+  transition: 0.3s all ease;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.custom-button:hover::after {
+  width: 100%;
+}
