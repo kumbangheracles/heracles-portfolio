@@ -111,7 +111,10 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     setBgColor(isDark ? "#14161d" : "#e6e9ff");
-  }, [isTheme]);
+    const html = document.documentElement;
+    html.classList.remove("dark", "light");
+    html.classList.add(isDark ? "dark" : "light");
+  }, [isDark]);
 
   return (
     <div className="w-full bg-[#14161d] relative">
@@ -185,13 +188,13 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
         }}
       >
         <div className="flex items-center text-white justify-center text-xl sm:text-4xl flex-col gap-1.5 tracking-tighter">
-          <div className="flex flex-col gap-1 justify-center w-[70%] items-center text-center">
+          <div className="flex flex-col gap-1 justify-center w-full items-center text-center">
             <div className="flex line-intro ">
               <h4 className="font-mono font-bold">HERKAL</h4>
               <h4 className="font-dancing">Taqyudin</h4>
             </div>
-            <h4 className="italic! font-normal font-mono tracking-wide text-sm text-gray-500">
-              Turning logic into meaningful digital experiences.
+            <h4 className="italic! font-normal font-mono tracking-wide text-[11px] sm:text-sm text-gray-500">
+              Evolving logic, line by line.
             </h4>
           </div>
         </div>

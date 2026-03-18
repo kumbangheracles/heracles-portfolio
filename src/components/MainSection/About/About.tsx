@@ -196,7 +196,7 @@ const AboutIndex = () => {
                   mt-3
              w-20
              h-10
-
+            font-mono
                 ${cn(
                   isTheme === "dark"
                     ? `text-gray-300 bg-white/20 hover:bg-white

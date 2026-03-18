@@ -49,16 +49,20 @@
 }
 :root {
   color-scheme: light dark;
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 html {
   scroll-behavior: smooth !important;
+}
+html.dark {
   background-color: #14161d !important;
 }
 
+html.light {
+  background-color: #e6e9ff !important;
+}
 .particles canvas {
   z-index: -1;
   height: 100%;
