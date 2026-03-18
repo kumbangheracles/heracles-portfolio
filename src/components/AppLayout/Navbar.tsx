@@ -69,17 +69,17 @@ const Navbar = () => {
       </div>
       <div className="sm:hidden block">
         <div className={`  text-[10px] font-mono flex items-center gap-4`}>
-          <div className="" onClick={() => setIdSection("about")}>
+          {/* <div className="" onClick={() => setIdSection("about")}>
             About
-          </div>
+          </div> */}
 
           {/* <div className="" onClick={() => setIdSection("projects")}>
             Projects
           </div> */}
 
-          <div className="" onClick={() => setIdSection("contact")}>
+          {/* <div className="" onClick={() => setIdSection("contact")}>
             Contact
-          </div>
+          </div> */}
 
           <ToggleButton />
         </div>

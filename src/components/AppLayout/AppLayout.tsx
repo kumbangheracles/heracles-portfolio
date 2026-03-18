@@ -67,7 +67,7 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
     const targetY =
       el.getBoundingClientRect().top +
       window.scrollY -
-      (isMobile ? 20 : idSection === "projects" ? -120 : 80); // 80 = offset navbar
+      (idSection === "projects" ? -120 : 80);
     const duration = 1700;
     const startY = window.scrollY;
     const diff = targetY - startY;
@@ -190,7 +190,7 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
               <h4 className="font-mono font-bold">HERKAL</h4>
               <h4 className="font-dancing">Taqyudin</h4>
             </div>
-            <h4 className="italic font-normal tracking-wide text-sm text-gray-500">
+            <h4 className="italic! font-normal font-mono tracking-wide text-sm text-gray-500">
               Turning logic into meaningful digital experiences.
             </h4>
           </div>

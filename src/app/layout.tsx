@@ -22,7 +22,7 @@ const dancing = Dancing_Script({
 });
 
 export const metadata = {
-  title: "kumbang-heracles",
+  title: "Herkal Taqyudin | Portfolio",
   description: "Portfolio",
 };
 
