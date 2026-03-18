@@ -55,8 +55,8 @@ export default function ScrambleText({
   };
 
   return (
-    <Tag className={className} onMouseEnter={scramble} onMouseLeave={stop}>
+    <div className={className} onMouseEnter={scramble} onMouseLeave={stop}>
       {text}
-    </Tag>
+    </div>
   );
 }
