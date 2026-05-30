@@ -2,9 +2,11 @@
 import { useStateContext } from "@/hooks/useStateContext";
 import { motion } from "motion/react";
 import { useRef, useEffect } from "react";
-
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 const NotFoundIndex = () => {
   const ref = useRef<HTMLDivElement>(null);
+  const path = usePathname();
   const {
     setIsInProjects,
     setBgColor,
@@ -12,6 +14,7 @@ const NotFoundIndex = () => {
     setParticleSize,
     setDisableRotationCustom,
     setParticleSpreadsCustom,
+    setIsNotFoundPage,
   } = useStateContext();
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -24,6 +27,7 @@ const NotFoundIndex = () => {
           setBgColor("#0a0a0a");
           setParticleSize("2vmin");
           setColors(["#f7f5ff", "#ffb1b1", "#ff4b4b"]);
+          setIsNotFoundPage(true);
         }
       },
       { threshold: 0.5 },
@@ -35,7 +39,7 @@ const NotFoundIndex = () => {
   return (
     <motion.main
       ref={ref}
-      className="w-screen h-screen px-[10vw] lg:pl-[15vw] lg:pr-[10vw] flex items-center justify-center"
+      className={` ${cn(path.startsWith("/admin") ? "w-full minh-h-screen" : "w-screen h-screen")}  px-[10vw] lg:pl-[15vw] lg:pr-[10vw] flex items-center justify-center`}
       initial={{ opacity: 0, filter: "blur(1px)" }}
       animate={{ opacity: 1, filter: "blur(0px)" }}
       exit={{ opacity: 0, filter: "blur(1px)" }}

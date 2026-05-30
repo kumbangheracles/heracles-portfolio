@@ -4,8 +4,9 @@ import ToggleButton from "../ToggleButton";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
-  const { setIdSection, isTheme } = useStateContext();
+  const { setIdSection, isTheme, isNotFoundPage } = useStateContext();
 
+  if (isNotFoundPage) return;
   return (
     <div
       className={`py-2  sm:px-10 px-4 flex items-center justify-between fixed top-0 z-50 ${cn(isTheme === "dark" ? "text-white" : "text-gray-700")} w-full  ${cn(isTheme === "dark" ? "bg-white/5" : "bg-white/40")} backdrop-blur-md transition-colors duration-500`}

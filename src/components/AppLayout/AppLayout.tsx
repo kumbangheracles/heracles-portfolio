@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import { ReactNode } from "react";
 import LoadingType3 from "../CustomLoading/LoadingType3/LoadingType3";
 import Navbar from "./Navbar";
-import { useViewport } from "@/hooks/useViewPort";
 import Particles from "../Particles";
 import CustomCursor from "../CustomCursor";
 import CursorTrail, { PALETTES } from "../CustomCursorType2/CustomCursorType2";
+import { useLenis } from "@/hooks/useLenis";
 
 const AppLayout = ({ children }: { children: ReactNode }) => {
   const [loadingVisible, setLoadingVisible] = useState<boolean>(true);
@@ -16,6 +16,7 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
   const [curtainOpen, setCurtainOpen] = useState<boolean>(false);
   const [curtainDone, setCurtainDone] = useState<boolean>(false);
   const [curtainReady, setCurtainReady] = useState<boolean>(false);
+  useLenis();
   const {
     setLoadingContext,
     colors,
@@ -27,8 +28,8 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
     setBgColor,
     setIsContentVisible,
     isTheme,
+    isNotFoundPage,
   } = useStateContext();
-  const { isMobile } = useViewport();
 
   useEffect(() => {
     setLoadingContext(loadingVisible || introVisible || curtainDone);
@@ -38,6 +39,18 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
     setIsContentVisible(contentVisible);
   }, [contentVisible]);
   useEffect(() => {
+    // if (pathname?.startsWith("/admin")) return;
+    if (isNotFoundPage) {
+      setLoadingVisible(false);
+      setIntroVisible(false);
+      setCurtainReady(true);
+      setCurtainOpen(true);
+      setCurtainDone(true);
+      setContentVisible(true);
+      setIdSection(null);
+      return;
+    }
+
     const fadeLoading = setTimeout(() => setLoadingVisible(false), 3000);
     const introIn = setTimeout(() => setIntroVisible(true), 3000);
     const introOut = setTimeout(() => setIntroVisible(false), 5000);
@@ -117,7 +130,7 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
   }, [isDark]);
 
   return (
-    <div className="w-full bg-[#14161d] relative">
+    <div className={`w-full bg-[#14161d] relative close-scrollbar`}>
       {/* Background */}
       <div className="hidden [@media(pointer:fine)]:block fixed inset-0 z-[1] mix-blend-screen pointer-events-none">
         {/* <MouseEffectScene

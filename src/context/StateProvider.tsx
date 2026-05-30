@@ -34,6 +34,8 @@ interface StateProps {
   setIsContentVisible: Dispatch<SetStateAction<boolean>>;
   isTheme: ThemeType;
   setIsTheme: Dispatch<SetStateAction<ThemeType>>;
+  isNotFoundPage: boolean;
+  setIsNotFoundPage: Dispatch<SetStateAction<boolean>>;
 }
 
 export const StateContext = createContext<StateProps | null>(null);
@@ -57,9 +59,12 @@ export const StateProvider = ({ children }: { children: ReactNode }) => {
   const [bgColor, setBgColor] = useState<string>("#14161d");
   const [isContentVisible, setIsContentVisible] = useState<boolean>(false);
   const [isTheme, setIsTheme] = useState<ThemeType>("dark");
+  const [isNotFoundPage, setIsNotFoundPage] = useState<boolean>(false);
   return (
     <StateContext.Provider
       value={{
+        isNotFoundPage,
+        setIsNotFoundPage,
         setIsTheme,
         isTheme,
         isContentVisible,
