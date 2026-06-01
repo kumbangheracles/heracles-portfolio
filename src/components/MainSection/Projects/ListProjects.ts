@@ -119,6 +119,13 @@ const ListProjects = [
         imageName: "hibahqu4",
       },
     ],
+    videos: [
+      {
+        id: 1,
+        src: "/projects-photo/hibahqu/hibahqu-video1.mp4",
+        videoName: "hibahqu1",
+      },
+    ],
   },
   {
     id: "quiz-app",
@@ -149,33 +156,82 @@ const ListProjects = [
     ],
   },
   {
-    id: "foundation",
-    name: "Foundation",
+    id: "fypof",
+    name: "FYPOF",
     description:
-      "The company profile website for a fictional company named FOUNDATION represents a business operating in the construction and development industry. It offers services including consulting, planning, construction, and renovation.",
+      "FYPOF (Find Your Peak of Fiction) is an AI-powered storytelling platform that helps writers generate story concepts, plots, and creative inspiration. Built with Gemini Flash Latest for text generation and a rotating image generation pipeline using FLUX.1 Schnell, Stable Diffusion XL, and Z-Image Turbo, FYPOF enables users to create both narrative drafts and visual story concepts from simple prompts.",
+    videos: [
+      {
+        id: 1,
+        src: "/projects-photo/fypof/fypof-video1.mp4",
+        videoName: "fypof-video1",
+      },
+    ],
+  },
+  {
+    id: "affren-flow",
+    name: "AffrenFlow",
+    description:
+      "AfreenFlow is a web-based financial management system for construction projects developed as a thesis project. It features project and transaction management, RBAC with Admin and Foreman roles, profit and loss calculation, cash flow analysis, and real-time financial monitoring. The system also implements the Prophet forecasting method to predict future cash flow, helping companies improve financial planning, transparency, and decision-making.",
     images: [
       {
         id: 1,
-        src: "/projects-photo/foundation/foundation-1.png",
+        src: "/projects-photo/affren-flow/affren1.png",
         imageName: "foundation1",
       },
       {
         id: 2,
-        src: "/projects-photo/foundation/foundation-2.png",
+        src: "/projects-photo/affren-flow/affren2.png",
         imageName: "foundation2",
       },
-      {
-        id: 3,
-        src: "/projects-photo/foundation/foundation-3.png",
-        imageName: "foundation3",
-      },
+
       // {
       //   id: 4,
-      //   src: "/projects-photo/foundation/foundation-4.png",
+      //   src: "/projects-photo/foundation/affren4.png",
       //   imageName: "foundation4",
       // },
     ],
+    videos: [
+      {
+        id: 1,
+        src: "/projects-photo/affren-flow/affrenvideo1.mp4",
+        videoName: "affrenvideo1",
+      },
+      {
+        id: 2,
+        src: "/projects-photo/affren-flow/affrenvideo2.mp4",
+        videoName: "affrenvideo2",
+      },
+    ],
   },
+  // {
+  //   id: "foundation",
+  //   name: "Foundation",
+  //   description:
+  //     "The company profile website for a fictional company named FOUNDATION represents a business operating in the construction and development industry. It offers services including consulting, planning, construction, and renovation.",
+  //   images: [
+  //     {
+  //       id: 1,
+  //       src: "/projects-photo/foundation/foundation-1.png",
+  //       imageName: "foundation1",
+  //     },
+  //     {
+  //       id: 2,
+  //       src: "/projects-photo/foundation/foundation-2.png",
+  //       imageName: "foundation2",
+  //     },
+  //     {
+  //       id: 3,
+  //       src: "/projects-photo/foundation/foundation-3.png",
+  //       imageName: "foundation3",
+  //     },
+  //     // {
+  //     //   id: 4,
+  //     //   src: "/projects-photo/foundation/foundation-4.png",
+  //     //   imageName: "foundation4",
+  //     // },
+  //   ],
+  // },
 ];
 
 export default ListProjects;

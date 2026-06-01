@@ -68,6 +68,7 @@ const ProjectIndex = () => {
             description={item?.description}
             name={item?.name}
             images={item?.images}
+            videos={item?.videos}
             styleColor1={isTheme === "light" ? "bg-white/50" : "bg-white/20"}
             styleColor2={isTheme === "light" ? "bg-white/50" : "bg-white/20"}
           />
