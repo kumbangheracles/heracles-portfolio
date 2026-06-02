@@ -71,6 +71,8 @@ const ProjectIndex = () => {
             videos={item?.videos}
             styleColor1={isTheme === "light" ? "bg-white/50" : "bg-white/20"}
             styleColor2={isTheme === "light" ? "bg-white/50" : "bg-white/20"}
+            linkDemo={item?.linkDemo}
+            linkGithub={item?.linkGithub}
           />
         ))}
       </div>

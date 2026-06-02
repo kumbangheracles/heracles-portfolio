@@ -2,6 +2,7 @@ const ListProjects = [
   {
     id: "vivibook",
     name: "VIVIBOOK",
+    linkGithub: "https://github.com/kumbangheracles/vivlio-store",
     description: `Designed and implemented a full-stack bookstore platform with
             authentication, CMS-based catalog management, and secure transaction
             processing via Midtrans using Next.js, Express.js, MySQL, Tailwind
@@ -52,6 +53,7 @@ const ListProjects = [
   {
     id: "acara",
     name: "Acara",
+    linkGithub: "https://github.com/kumbangheracles/front-end-acara",
     description:
       "Developed an event management web application as part of the WPU MERN Stack course, implementing a full-stack system that allows users to browse events, register, and manage participation through a structured interface. The project includes authentication, form validation, and a RESTful API for managing event and user data, built using React, Next.js, Tailwind CSS, React Hook Form, TanStack React Query, Node.js, Express.js, MongoDB (Mongoose), TypeScript, JWT authentication, and Swagger API documentation.",
     images: [
@@ -95,6 +97,7 @@ const ListProjects = [
   {
     id: "hibahqu",
     name: "HibahQu",
+    linkDemo: "https://hibahqu.raharja.ac.id/dashboard",
     description:
       "Web-based grant management system that streamlines the process of proposal submission, review, monitoring, and reporting in a structured and transparent way. It features a CMS and Role-Based Access Control (RBAC) for managing users and permissions. The system is built with a monolithic architecture using Laravel for the backend, Vue.js, Naive UI, and Tailwind CSS for the frontend, and MySQL as the database.",
     images: [
@@ -130,6 +133,8 @@ const ListProjects = [
   {
     id: "quiz-app",
     name: "Quiz App",
+    linkDemo: "https://quiz-app-jsbb.vercel.app",
+    linkGithub: "https://github.com/kumbangheracles/quiz-app",
     description:
       "Static web-based quiz application that allows users to answer multiple-choice questions in an interactive interface. The application focuses on a simple and responsive user experience where users can navigate through questions and view their results after completing the quiz.",
     images: [
@@ -158,6 +163,8 @@ const ListProjects = [
   {
     id: "fypof",
     name: "FYPOF",
+    linkDemo: "https://fypof-fe.vercel.app/",
+    linkGithub: "https://github.com/kumbangheracles/fypof",
     description:
       "FYPOF (Find Your Peak of Fiction) is an AI-powered storytelling platform that helps writers generate story concepts, plots, and creative inspiration. Built with Gemini Flash Latest for text generation and a rotating image generation pipeline using FLUX.1 Schnell, Stable Diffusion XL, and Z-Image Turbo, FYPOF enables users to create both narrative drafts and visual story concepts from simple prompts.",
     videos: [
@@ -171,6 +178,7 @@ const ListProjects = [
   {
     id: "affren-flow",
     name: "AffrenFlow",
+    linkGithub: "https://github.com/kumbangheracles/affren-flow",
     description:
       "AfreenFlow is a web-based financial management system for construction projects developed as a thesis project. It features project and transaction management, RBAC with Admin and Foreman roles, profit and loss calculation, cash flow analysis, and real-time financial monitoring. The system also implements the Prophet forecasting method to predict future cash flow, helping companies improve financial planning, transparency, and decision-making.",
     images: [
